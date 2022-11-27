@@ -20,7 +20,7 @@
 <head>
     <meta charset="utf-8" />
     {% block meta %}<!-- block meta  -->{% endblock %}
-    <title>{% block title %} ? {% endblock %} - Wenger Python Webapp</title>
+    <title>{% block title %} 主页 {% endblock %} - 龚娉婷的网站</title>
     <link rel="stylesheet" href="/static/addons/uikit.min.css">
     <link rel="stylesheet" href="/static/addons/uikit.gradient.min.css">
     <link rel="stylesheet" href="/static/addons/awesome.css" />
@@ -32,14 +32,16 @@
     <script src="/static/js/awesome.js"></script>
     {% block beforehead %}<!-- before head  -->{% endblock %}
 </head>
+
 <body>
     <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
         <div class="uk-container uk-container-center">
-            <a href="/" class="uk-navbar-brand">Wenger Awesome Website</a>
+            <a href="/" class="uk-navbar-brand">龚娉婷的网站</a>
             <ul class="uk-navbar-nav">
-                <li data-url="blogs"><a href="/"><i class="uk-icon-home"></i> 日志</a></li>
-                <li><a target="_blank" href="#"><i class="uk-icon-book"></i> 教程</a></li>
-                <li><a target="_blank" href="#"><i class="uk-icon-code"></i> 源码</a></li>
+                <li><a href="/"><i class="uk-icon-home"></i> 主页</a></li>
+                <li><a href="/read"><i class="uk-icon-user"></i> 朋友</a></li>
+                <li><a href="/blogs"><i class="uk-icon-wordpress"></i> 日志</a></li>
+                <li><a href="/code"><i class="uk-icon-code"></i> 代码</a></li>
             </ul>
             <div class="uk-navbar-flip">
                 <ul class="uk-navbar-nav">
@@ -63,10 +65,19 @@
 
     <div class="uk-container uk-container-center">
         <div class="uk-grid">
-            <!-- content -->
             {% block content %}
+                <div class="uk-width-medium-3-4">
+                    <div class="uk-panel uk-panel-header">
+                        <h3 class="uk-panel-title">友情链接</h3>
+                        <ul class="uk-list uk-list-line">
+                           <li><i class="uk-icon-twitter"></i> <a target="_blank" href="http://www.twitter.com">TWITTER</a></li>
+                           <li><i class="uk-icon-youtube"></i> <a target="_blank" href="http://www.youtube.com">YOUTUBE</a></li>
+                           <li><i class="uk-icon-google"></i> <a target="_blank" href="http://www.google.com">GOOGLE</a></li>
+                           <li><i class="uk-icon-yelp"></i> <a target="_blank" href="http://www.yelp.com">YELP</a></li>
+                        </ul>
+                    </div>
+                </div>
             {% endblock %}
-            <!-- // content -->
         </div>
     </div>
 
@@ -79,8 +90,8 @@
                     <a target="_blank" href="http://www.linkedin.com/" class="uk-icon-button uk-icon-linkedin-square"></a>
                     <a target="_blank" href="https://twitter.com/" class="uk-icon-button uk-icon-twitter"></a>
                 </p>
-                <p>Powered by <a href="http://awesome.test.com">Wenger Python Webapp</a>. Copyright &copy; 2022. [<a href="/manage/" target="_blank">Manage</a>]</p>
-                <p><a href="http://www.testtesttest.com/" target="_blank">www.testtesttest.com</a>. All rights reserved.</p>
+                <p>Powered by <a href="http://www.gongpingting.top">龚娉婷的爸爸</a>. Copyright &copy; 2022. [<a href="/manage/" target="_blank">Manage</a>]</p>
+                <p><a href="http://www.gongpingting.top/" target="_blank">www.gongpingting.top</a>. All rights reserved.</p>
                 <a target="_blank" href="http://www.w3.org/TR/html5/"><i class="uk-icon-html5" style="font-size:64px; color: #444;"></i></a>
             </div>
 

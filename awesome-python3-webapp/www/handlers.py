@@ -78,12 +78,35 @@ async def cookie2user(cookie_str):
 
 ##############################################################################################
 @get('/')
-#async def index(request):
-#    users = await User.findAll()
-#    return {
-#        '__template__': 'test.html',
-#        'users': users
-#   }
+def home(request):
+    return {
+        '__template__': 'home.html',
+        '__user__': request.__user__
+    }
+
+@get('/home')
+async def index(request):
+    users = await User.findAll()
+    return {
+        '__template__': 'home.html'
+#        '__user__': request.__user__
+   }
+
+@get('/read')
+def read(request):
+    return {
+        '__template__': 'read.html',
+        '__user__': request.__user__
+    }
+
+@get('/code')
+def code(request):
+    return {
+        '__template__': 'code.html',
+        '__user__': request.__user__
+    }
+
+@get('/blogs')
 async def index(*, page=1, request):
     page_index = get_page_index(page)
     num = await Blog.findNumber('count(id)')

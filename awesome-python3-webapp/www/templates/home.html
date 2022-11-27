@@ -1,6 +1,6 @@
 {% extends '__base__.html' %}
 
-{% block title %}日志{% endblock %}
+{% block title %}读书{% endblock %}
 
 {% block beforehead %}
 
@@ -11,20 +11,18 @@
 
 {% block content %}
 
-    <div class="uk-width-medium-3-4">
-    {% for blog in blogs %}
-        <article class="uk-article">
-            <h2><a href="/blog/{{ blog.id }}">{{ blog.name }}</a></h2>
-            <p class="uk-article-meta">发表于{{ blog.created_at|datetime }}</p>
-            <p>{{ blog.summary }}</p>
-            <p><a href="/blog/{{ blog.id }}">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
-        </article>
-        <hr class="uk-article-divider">
-    {% endfor %}
-        <div class="uk-form-row">
-            <a href="/manage/blogs/create" class="uk-button uk-button-primary"><i class="uk-icon-pencil"></i> 写博客</a>
-        </div>
-    {{ pagination('/?page=', page) }}
+    <div class="uk-width-medium-1-4">
+        <img src="https://image-1315213349.cos.ap-shanghai.myqcloud.com/Hannah_web_img/Hannah_photo.jpg">
+    </div>
+
+    <div class="uk-width-medium-1-2">
+        <h3 class="uk-panel-title">龚娉婷，女，出生于2015年1月27日。</h3>
+        <h3 class="uk-panel-title">农历属马，腊月初八，腊八节出生。</h3>
+        <h3 class="uk-panel-title">2022年，上海实验学校东校二年级4班。</h3>
+        <h3 class="uk-panel-title">喜欢跳舞，画画，玩。</h3>
+        <h3 class="uk-panel-title">不喜欢学习，不爱劳动。</h3>
+        <h3 class="uk-panel-title">2022年，一年级下荣获"校长表扬生奖"。</h3>
+        <h3 class="uk-panel-title">2022年秋，检查出双眼近视，200度。</h3>
     </div>
 
     <div class="uk-width-medium-1-4">

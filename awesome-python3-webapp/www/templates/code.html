@@ -1,6 +1,6 @@
 {% extends '__base__.html' %}
 
-{% block title %}日志{% endblock %}
+{% block title %}读书{% endblock %}
 
 {% block beforehead %}
 
@@ -11,23 +11,10 @@
 
 {% block content %}
 
-    <div class="uk-width-medium-3-4">
-    {% for blog in blogs %}
-        <article class="uk-article">
-            <h2><a href="/blog/{{ blog.id }}">{{ blog.name }}</a></h2>
-            <p class="uk-article-meta">发表于{{ blog.created_at|datetime }}</p>
-            <p>{{ blog.summary }}</p>
-            <p><a href="/blog/{{ blog.id }}">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
-        </article>
-        <hr class="uk-article-divider">
-    {% endfor %}
-        <div class="uk-form-row">
-            <a href="/manage/blogs/create" class="uk-button uk-button-primary"><i class="uk-icon-pencil"></i> 写博客</a>
-        </div>
-    {{ pagination('/?page=', page) }}
+    <div class="uk-width-medium-2-4">
     </div>
 
-    <div class="uk-width-medium-1-4">
+    <div class="uk-width-medium-4-4">
         <div class="uk-panel uk-panel-header">
             <h3 class="uk-panel-title">友情链接</h3>
             <ul class="uk-list uk-list-line">
